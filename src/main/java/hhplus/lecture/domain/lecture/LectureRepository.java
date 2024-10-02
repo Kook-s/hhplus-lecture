@@ -6,6 +6,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface LectureRepository {
-
-    List<Lecture> findByDate(LocalDate date);
+    Lecture findById(Long id);
+    List<Lecture> findAvailableLecturesByDate(LocalDate date);
 }
