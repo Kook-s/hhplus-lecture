@@ -1,6 +1,11 @@
 package hhplus.lecture.domain.lecture;
 
-import hhplus.lecture.infrastructure.persistence.lecture.JpaLectureRepository;
+import hhplus.lecture.infra.persistence.lecture.JpaLectureRepository;
 
-public interface LectureRepository extends JpaLectureRepository {
+import java.time.LocalDate;
+import java.util.List;
+
+public interface LectureRepository {
+
+    List<Lecture> findByDate(LocalDate date);
 }
